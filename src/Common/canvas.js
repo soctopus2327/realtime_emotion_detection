@@ -11,7 +11,6 @@ const _setRectStyle = (context) => {
 };
 
 const _drawRect = (context, boundingBox) => {
-  // rectangle draw all around the face
   context.beginPath();
   _setRectStyle(context);
   const { x, y, width } = _getRectDim(boundingBox, context);
@@ -84,9 +83,7 @@ const drawOnCanvas = (
   _clearCanvas(context);
   _drawImage(video, context);
   for (let bb of boundingBox) {
-    // recuperation of all values into boundingBox (coordinate of face)
     _drawRect(context, bb);
-    // recuperation of face only if boundingBox has valuable coordinates
     if (_isBoundingBoxPositive(bb) && state.isModelSet) {
       _drawPrediction(context, bb, emotionRecognizer, state);
     }

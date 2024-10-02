@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Loading } from "./Loading";
-import { GithubLink } from "./GithubLink";
+import { GithubLink } from "./Header";
 
 type switchCameraProps = {
   isModelLoaded: boolean,
@@ -24,7 +24,7 @@ const SwitchCamera = (props: switchCameraProps) => {
     <div className="info">
       {!props.isModelLoaded ? <Loading /> : <GithubLink />}
       <div>
-        <select className={"cameraSelector"}>
+        {/* <select className={"cameraSelector"}>
           {devices.map((device, key) => (
             <option
               key={device.deviceId}
@@ -33,7 +33,7 @@ const SwitchCamera = (props: switchCameraProps) => {
               {device.label || `Device ${key + 1}`}
             </option>
           ))}
-        </select>
+        </select> */}
       </div>
     </div>
   );

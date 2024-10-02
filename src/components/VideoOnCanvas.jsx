@@ -8,7 +8,7 @@ type videoOnCanvasProps = {
 };
 
 const VideoOnCanvas = (props: videoOnCanvasProps) => (
-  <div>
+  <div className='vidsection'>
     <canvas
       ref={props.canvasRef}
       width={1920}

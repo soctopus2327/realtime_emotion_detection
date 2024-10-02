@@ -44,7 +44,6 @@ const ManageVideoOnCanvas = () => {
 
   useEffect(() => {
     if (!state.isModelSet) {
-      // MODEL EMOTION RECOGNITION
       tf.ready().then(() =>
         loadModel(URL_EMOTION_RECOGNITION_MODEL, setState, state)
       );
